@@ -1,0 +1,142 @@
+/* ---------- Photos Page ---------- */
+.photos-container {
+  background-color: #fafafa;
+  padding: 4rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.photos-inner {
+  border-radius: 10px;
+  padding: 3rem 2rem;
+  max-width: 1400px;
+  width: 100%;
+  text-align: center;
+}
+
+.photos-inner h2 {
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
+  color: #c2185b;
+  font-weight: 600;
+}
+
+/* ---------- Flip Gallery Grid ---------- */
+.flip-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 2.5rem;
+  justify-items: center;
+}
+
+/* ---------- Heart Flip Card ---------- */
+.heart-flip-card {
+  width: 100%;
+  max-width: 340px;
+  height: 450px;
+  perspective: 1200px;
+}
+
+.heart-flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+}
+
+.heart-flip-card:hover .heart-flip-inner {
+  transform: rotateY(180deg);
+}
+
+/* shared front/back styling */
+.heart-flip-front,
+.heart-flip-back {
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* FRONT with emoji + hearts */
+.heart-flip-front {
+  position: relative;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.heart-reveal-emoji {
+  font-size: 3em;
+  z-index: 2;
+  transition: opacity 0.4s ease;
+}
+
+/* hearts overlay while flipping */
+.heart-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.heart {
+  font-size: 2rem;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+.heart-flip-card:hover .heart {
+  opacity: 1;
+  transform: scale(2.5);
+}
+
+.heart-flip-card:hover .heart-reveal-emoji {
+  opacity: 0;
+}
+
+/* BACK with image + caption */
+.heart-flip-back {
+  background-color: #000;
+  transform: rotateY(180deg);
+  flex-direction: column;
+}
+.heart-flip-back img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.heart-flip-back .photo-caption {
+  position: absolute;
+  bottom: 1rem;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: 600;
+  z-index: 4;
+}
+
+/* ---------- Slider / Gallery Section ---------- */
+.slider-section {
+  width: 100%;
+  max-width: 1400px;
+  padding: 3rem 2rem;
+  border-radius: 10px;
+}
+
+.gallery-section {
+  width: 100%;
+}

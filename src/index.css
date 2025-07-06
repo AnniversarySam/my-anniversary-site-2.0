@@ -1,0 +1,40 @@
+/* Apply to everything globally */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove margin/padding and prevent horizontal overflow */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: overlay; /* Allows scrollbar to overlay without shifting layout */
+  width: 100%;
+  max-width: 100vw;
+  font-family: 'Inter', sans-serif; /* Optional: your font */
+}
+
+/* WebKit Scrollbar: Completely hidden */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Firefox Scrollbar: Completely hidden */
+html, body {
+  scrollbar-width: none;
+  scrollbar-color: transparent transparent;
+}

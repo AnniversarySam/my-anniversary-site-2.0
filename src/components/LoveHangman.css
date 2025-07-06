@@ -1,0 +1,92 @@
+.hangman-container {
+  background: #ffffff;
+  min-height: calc(100vh - 80px);
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #111;
+  font-family: 'Inter', sans-serif;
+}
+
+.hangman-container h2 {
+  font-size: 2rem;
+  color: #000;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.word-display {
+  display: flex;
+  gap: 1rem;
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.letter {
+  border-bottom: 2px solid #000;
+  width: 36px;
+  text-align: center;
+}
+
+.letter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  max-width: 700px;
+  margin-bottom: 2rem;
+}
+
+.letter-buttons button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #000;
+  background-color: transparent;
+  color: #000;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.letter-buttons button:hover:not(:disabled) {
+  background-color: #000;
+  color: #fff;
+}
+
+.letter-buttons button:disabled {
+  background-color: #f0f0f0;
+  color: #888;
+  cursor: not-allowed;
+  border-color: #ccc;
+}
+
+.status-message {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.win {
+  color: #2e7d32;
+}
+
+.lose {
+  color: #d32f2f;
+}
+
+.restart-btn {
+  padding: 0.6rem 1.8rem;
+  font-size: 1rem;
+  background-color: transparent;
+  color: #000;
+  border: 1px solid #000;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.restart-btn:hover {
+  background-color: #000;
+  color: #fff;
+}

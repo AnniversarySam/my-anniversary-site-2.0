@@ -1,0 +1,77 @@
+/* ---------- Scrollable Gallery Styles ---------- */
+
+.scroll-gallery-wrapper {
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.scroll-gallery-wrapper h3 {
+  font-size: 2rem;
+  color: #c2185b;
+  margin: 0 auto 2rem;
+  max-width: 1300px;
+  padding: 0 1.5rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* ---------- Horizontal Scroll Area ---------- */
+.scroll-gallery-track {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  gap: 1.5rem;
+  padding: 0 1.5rem 1rem;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+}
+
+/* ---------- Super Minimal Scrollbar ---------- */
+.scroll-gallery-track::-webkit-scrollbar {
+  height: 2px;
+}
+
+.scroll-gallery-track::-webkit-scrollbar-thumb {
+  background-color: #bbb;       /* lighter than black */
+  border-radius: 0;
+  border-left: none;            /* removes left edge visually */
+}
+
+.scroll-gallery-track::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Firefox */
+.scroll-gallery-track {
+  scrollbar-width: thin;
+  scrollbar-color: #bbb transparent;
+}
+
+/* ---------- Individual Scroll Items ---------- */
+.scroll-gallery-item {
+  flex: 0 0 auto;
+  width: 320px;
+  height: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+  scroll-snap-align: start;
+  border: 1px solid #e0e0e0;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.scroll-gallery-item:hover {
+  transform: scale(1.04);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+.scroll-gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}

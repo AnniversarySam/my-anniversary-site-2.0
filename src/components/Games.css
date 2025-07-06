@@ -1,0 +1,72 @@
+/* ---------- Game Landing Page Styles ---------- */
+
+.games-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Vertically center */
+  text-align: center;
+  background-image: url('/images/special-day.JPG'); /* Update with your image */
+  background-size: cover;
+  background-position: center top 17%;;
+  background-repeat: no-repeat;
+  min-height: calc(100vh); /* Adjust height to exclude header */
+  padding: 2rem;
+  position: relative;
+}
+
+/* Optional overlay for readability */
+.games-container::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgb(247, 179, 207,0.3);
+  z-index: 0;
+}
+
+.games-container h2 {
+  font-size: 2.5rem;
+  color: #e0005a;
+  margin-bottom: 3rem;
+  font-weight: 600;
+  z-index: 1;
+}
+
+.game-buttons {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  z-index: 1;
+}
+
+.game-btn {
+  padding: 1rem 2.5rem;
+  font-size: 1.3rem;
+  border: none;
+  border-radius: 12px;
+  background-color: #c2185b;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.game-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive layout */
+@media (max-width: 600px) {
+  .game-btn {
+    width: 100%;
+    font-size: 1.1rem;
+  }
+
+  .game-buttons {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
