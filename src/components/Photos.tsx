@@ -22,8 +22,8 @@ const Photos = () => {
                 </div>
               </div>
               <div className="heart-flip-back">
-                <img src="/images/photo1.jpg" alt="First Trip Together" />
-                <p className="photo-caption">First Trip Together</p>
+                <img src="/images/photo1.jpg" alt="Back when we were young" />
+                <p className="photo-caption">Back when we were young</p>
               </div>
             </div>
           </div>
@@ -40,8 +40,8 @@ const Photos = () => {
                 </div>
               </div>
               <div className="heart-flip-back">
-                <img src="/images/photo2.jpg" alt="Birthday Surprise" />
-                <p className="photo-caption">Birthday Surprise</p>
+                <img src="/images/photo2.jpg" alt="TABULA RASAAA" />
+                <p className="photo-caption">TABULA RASAAA</p>
               </div>
             </div>
           </div>
@@ -59,7 +59,7 @@ const Photos = () => {
               </div>
               <div className="heart-flip-back">
                 <img src="/images/photo3.jpg" alt="Goofy Moments" />
-                <p className="photo-caption">Goofy Moments</p>
+                <p className="photo-caption">Me wearing sweatshirts everywhere</p>
               </div>
             </div>
           </div>

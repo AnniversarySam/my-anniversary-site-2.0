@@ -1,13 +1,24 @@
 import { useState } from 'react';
 import './LoveHangman.css';
 
-const words = ['HUG', 'KISS', 'HEART', 'SMILE', 'FOREVER', 'CUDDLE'];
+const words = [
+  'ARGO',
+  'SPOTLIGHT',
+  'MOONLIGHT',
+  'PARASITE',
+  'NOMADLAND',
+  'CODA',
+  'OPPENHEIMER',
+  'STAY',
+  'HELLO',
+  'BADGUY',
+];
 
 const LoveHangman = () => {
   const [word] = useState(words[Math.floor(Math.random() * words.length)]);
   const [guesses, setGuesses] = useState<string[]>([]);
   const [mistakes, setMistakes] = useState(0);
-  const maxMistakes = 6;
+  const maxMistakes = 5;
 
   const handleGuess = (letter: string) => {
     if (guesses.includes(letter)) return;
@@ -28,7 +39,7 @@ const LoveHangman = () => {
 
   return (
     <div className="hangman-container">
-      <h2>Guess the Word of Love 💘</h2>
+      <h2>Guess the Word, you have {maxMistakes - mistakes} lives</h2>
 
       <div className="word-display">
         {word.split('').map((letter, i) => (

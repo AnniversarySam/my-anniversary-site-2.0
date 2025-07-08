@@ -31,7 +31,7 @@ const Home = () => {
           <div className="journey-gallery">
             <div className="gallery-item">
               <img src="/images/first-date.jpg" alt="First Date" />
-              <p>First Date</p>
+              <p>Restaurant Hopping</p>
             </div>
             <div className="gallery-item">
               <img src="/images/special-day.jpg" alt="A Special Day" />

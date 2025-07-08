@@ -5,15 +5,29 @@ import './Quiz.css';
 const questions = [
   {
     question: 'Where did we go on our first trip?',
-    options: ['Goa', 'Manali', 'Kerala', 'Jaipur'],
-    answer: 'Manali',
+    options: ['Kabini', 'NYC', 'Chicago', 'jersey'],
+    answer: 'Kabini',
   },
   {
-    question: 'What is our favorite movie together?',
-    options: ['La La Land', 'Interstellar', 'Yeh Jawaani Hai Deewani', 'Dil Chahta Hai'],
-    answer: 'Yeh Jawaani Hai Deewani',
+    question: 'What is my favorite movie?',
+    options: ['The greatest game every played', 'Interstellar', 'Yeh Jawaani Hai Deewani', 'Dil Chahta Hai'],
+    answer: 'The greatest game every played',
   },
-  // Add more questions here...
+   {
+    question: 'Who was my fav artist in 2015?',
+    options: ['Martin Garrix', 'Calvin Harris', 'AR Rahman', 'DVLM'],
+    answer: 'Calvin Harris',
+  },
+   {
+    question: 'What would be our last meal?',
+    options: ['Pizza', 'Pasta', 'Naan', 'Idli'],
+    answer: 'Pizza',
+  },
+   {
+    question: 'Best breakfast spot in Hyderabad?',
+    options: ['Varlakshmi', 'My place', 'Your place', 'Ram Ki Bandi'],
+    answer: 'Varlakshmi',
+  },
 ];
 
 const Quiz = () => {
